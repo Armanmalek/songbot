@@ -24,7 +24,7 @@ defmodule SongbotWeb.Router do
   scope "/api", SongbotWeb do
     pipe_through :api
 
-    get "/songlink", SonglinkController, :index
+    post  "/songlink", SonglinkController, :index
   end
 
   # Enables LiveDashboard only for development

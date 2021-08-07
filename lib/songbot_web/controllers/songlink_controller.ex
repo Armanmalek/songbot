@@ -4,6 +4,7 @@ defmodule SongbotWeb.SonglinkController do
 
   def index(conn, params) do
     IO.inspect(conn)
+    IO.inspect(params)
     # whichBrand = Conn.get
     json(conn, %{"arman" => "erer"})
   end
