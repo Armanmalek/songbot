@@ -17,15 +17,14 @@ defmodule SongbotWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-
   end
 
   # Other scopes may use custom stacks.
   scope "/api", SongbotWeb do
     pipe_through :api
 
-    post  "/songlink", SonglinkController, :index
-  end
+    post "/songlink", SonglinkController, :index
+end
 
   # Enables LiveDashboard only for development
   #
