@@ -6,7 +6,7 @@ defmodule SongbotWeb.SonglinkController do
     IO.inspect(params)
 
     getParams(params)
-    json(conn, %{fuck: "off"}
+    json(conn, %{fuck: "off"})
   end
 
   def getParams(%{"response_url" => url, "text" => text} = params) do
