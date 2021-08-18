@@ -10,12 +10,13 @@ defmodule SongbotWeb.SonglinkController do
   end
 
   def getParams(%{"response_url" => url, "text" => text} = params) do
-
-    text |> String.contains?("spotify")
+    text
+    |> String.contains?("spotify")
     |> case do
       true -> call_spotify(text)
       false -> "doesn't work rn"
-   end
+    end
+  end
 
   def getParams(%{"response_url" => url}) do
     "No song provided: Paste link after slash command"
